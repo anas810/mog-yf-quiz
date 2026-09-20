@@ -1,6 +1,9 @@
 /** Absolute, immutable project URL — needed so X can fetch the score-card image. */
 export const SITE_URL = "https://mog-quiz.lovable.app";
 
+/** Link included in the tweet text when sharing a score. */
+const TWEET_URL = "https://mog-quiz.vercel.app/";
+
 export const X_HANDLE = "@onchainheroes";
 
 export const TOTAL_QUESTIONS = 15;
