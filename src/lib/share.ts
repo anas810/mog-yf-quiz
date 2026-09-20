@@ -1,6 +1,9 @@
 /** Absolute, immutable project URL — needed so X can fetch the score-card image. */
 export const SITE_URL = "https://mog-quiz.lovable.app";
 
+/** Link included in the tweet text when sharing a score. */
+const TWEET_URL = "https://mog-quiz.vercel.app/";
+
 export const X_HANDLE = "@onchainheroes";
 
 export const TOTAL_QUESTIONS = 15;
@@ -30,6 +33,6 @@ export function sharePageUrl(score: number): string {
 export function tweetUrl(score: number, rankTitle: string): string {
   const text = `I scored ${clampScore(score)}/${TOTAL_QUESTIONS} on the ${X_HANDLE} Maze of Gains quiz — rank: ${rankTitle}.\n\nThink you know the maze better?`;
   return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(
-    SITE_URL,
+    TWEET_URL,
   )}`;
 }
