@@ -30,6 +30,6 @@ export function sharePageUrl(score: number): string {
 export function tweetUrl(score: number, rankTitle: string): string {
   const text = `I scored ${clampScore(score)}/${TOTAL_QUESTIONS} on the ${X_HANDLE} Maze of Gains quiz — rank: ${rankTitle}.\n\nThink you know the maze better?`;
   return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(
-    SITE_URL,
+    TWEET_URL,
   )}`;
 }
